@@ -19,7 +19,7 @@ export const heroPawCollage = [
     alt: "Golden retriever portrait",
   },
   {
-    src: "https://images.unsplash.com/photo-1598133894008-61f7fdb863cc?auto=format&fit=crop&w=400&q=85",
+    src: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=400&q=85",
     alt: "French bulldog portrait",
   },
 ] as const;
