@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { site } from "@/lib/site";
 
 const stories = [
   {
@@ -40,6 +41,8 @@ const stories = [
 ] as const;
 
 export function FigmaReviews() {
+  const whatsappNumber = site.phoneHref.replace(/\D/g, "");
+
   return (
     <section id="reviews" className="bg-[#fffaf3] px-0 py-16 sm:py-20">
       <div className="container-home">
@@ -51,10 +54,21 @@ export function FigmaReviews() {
           <h2 className="mt-5 text-h2 text-text-primary">
             Real Google Reviews
           </h2>
+          <p className="mt-2 text-sm font-semibold text-[#7c2d12]">
+            Ronit Pet Kennel · Lucknow
+          </p>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
             Pulled from your shared review screenshots. These are real buyer
             voices from Lucknow and nearby areas.
           </p>
+          <a
+            href="https://www.google.com/search?q=Ronit+Pet+Kennel+Lucknow"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex rounded-full border border-[#f59e0b] bg-white px-5 py-2 text-xs font-bold uppercase tracking-wide text-[#7c2d12] transition hover:bg-[#fff7ed]"
+          >
+            View Ronit Pet Kennel on Google
+          </a>
 
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-3 divide-x divide-[#f9d8a9] overflow-hidden rounded-2xl border border-[#f8d7a6] bg-white">
             <div className="px-4 py-4">
@@ -214,10 +228,24 @@ export function FigmaReviews() {
               Browse Puppies
             </a>
             <a
-              href="tel:+917054611731"
+              href={`tel:${site.phoneHref}`}
               className="rounded-full border border-[#f59e0b] bg-white px-6 py-3 text-sm font-bold text-[#7c2d12] transition hover:bg-[#fff7ed]"
             >
-              Contact an Advisor
+              Call
+            </a>
+            <a
+              href={`sms:${site.phoneHref}?body=Hi%2C%20I%20want%20details%20about%20available%20puppies%20in%20Lucknow.`}
+              className="rounded-full border border-[#f59e0b] bg-white px-6 py-3 text-sm font-bold text-[#7c2d12] transition hover:bg-[#fff7ed]"
+            >
+              SMS
+            </a>
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=Hi%2C%20I%20want%20details%20about%20available%20puppies%20in%20Lucknow.`}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-[#25D366] bg-[#25D366] px-6 py-3 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              WhatsApp
             </a>
           </div>
         </div>
