@@ -8,14 +8,6 @@ const stats = [
   { value: "5★", label: "Rating" },
 ] as const;
 
-const trustSignals = [
-  "Location: Cantonment, Lucknow 226002",
-  "Google rating: 4.4 based on 85 reviews",
-  "Vet-backed vaccination and deworming records",
-  "Pickup support across key Lucknow zones",
-  "Real local families with post-adoption support",
-] as const;
-
 export function FigmaAbout() {
   return (
     <section
@@ -46,17 +38,6 @@ export function FigmaAbout() {
             Before reservation, we walk you through breed fit, provide
             veterinary records, and support your first-week transition plan.
           </p>
-
-          <ul className="mt-6 grid gap-2 text-sm font-medium text-text-primary sm:grid-cols-2">
-            {trustSignals.map((signal) => (
-              <li
-                key={signal}
-                className="rounded-xl border border-border-soft bg-bg-section px-3 py-2"
-              >
-                {signal}
-              </li>
-            ))}
-          </ul>
 
           <dl className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
             {stats.map((s) => (

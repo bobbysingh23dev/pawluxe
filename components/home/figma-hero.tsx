@@ -22,14 +22,14 @@ export function FigmaHero() {
 
         <div className="relative flex -translate-y-3 flex-col items-center text-center sm:-translate-y-4">
           <div className="pointer-events-none absolute inset-x-0 top-[120px] z-0 h-[220px] rounded-full bg-[#fed7aa]/50 blur-3xl" />
-          <div className="relative h-[320px] w-[440px] max-w-full sm:h-[340px] sm:w-[480px]">
-            <div className="absolute left-1/2 top-[54%] z-10 h-[236px] w-[390px] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+          <div className="relative h-[400px] w-[560px] max-w-full sm:h-[460px] sm:w-[640px]">
+            <div className="absolute left-1/2 top-[54%] z-10 h-[300px] w-[500px] -translate-x-1/2 -translate-y-1/2 overflow-hidden sm:h-[340px] sm:w-[560px]">
               <Image
                 src={paw}
                 alt="Dog paw shape"
                 fill
                 className="object-cover object-top"
-                sizes="390px"
+                sizes="(max-width: 640px) 500px, 560px"
                 priority
               />
             </div>
