@@ -5,8 +5,11 @@ import { site } from "@/lib/site";
 import { FigmaShopCard } from "@/components/home/figma-shop-card";
 
 export const metadata: Metadata = {
-  title: "Programs",
-  description: `Browse ${site.name} placement programs by breed and life stage.`,
+  title: `Buy Puppies in ${site.city}`,
+  description: `Browse ${site.name} puppy listings in ${site.city} with breed-wise pricing, availability, and verified records.`,
+  alternates: {
+    canonical: `${site.url}/dogs`,
+  },
 };
 
 export default function DogsPage() {
@@ -19,11 +22,11 @@ export default function DogsPage() {
           PawLuxe
         </p>
         <h1 className="mt-2 text-center text-4xl font-extrabold text-charcoal">
-          Programs
+          Puppies in Lucknow
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted">
-          Every card opens a private brief—pricing, process, and what you receive
-          on that line. No public puppy galleries.
+          Compare available breeds, expected pricing, and open spots across
+          Lucknow-friendly companion and pedigree lines.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((c) => (

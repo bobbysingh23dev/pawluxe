@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 
 const quick = [
   { href: "/", label: "Home" },
+  { href: "/lucknow/puppies", label: "Puppies in Lucknow" },
   { href: "/#about", label: "About Us" },
   { href: "/dogs", label: "Shop" },
   { href: "/blog", label: "Blog" },
@@ -16,14 +17,20 @@ export function SiteFooter() {
     >
       <div className="container-home py-16 sm:py-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-lg font-bold">{site.name}</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-              Ethical breeding, healthy puppies, and lifelong support for your
-              new companion.
+              Healthy puppies in Lucknow with verified records, transparent
+              pricing, and local handoff support.
             </p>
+            <a
+              href={`tel:${site.phoneHref}`}
+              className="mt-4 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-bold text-white transition hover:bg-orange-500"
+            >
+              Call now for Lucknow availability
+            </a>
           </div>
-          <div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
               Quick links
             </p>
@@ -48,7 +55,7 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
               Contact
             </p>
@@ -62,13 +69,16 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href="tel:+18447295893" className="transition hover:text-primary">
+                <a href={`tel:${site.phoneHref}`} className="transition hover:text-primary">
                   {site.phone}
                 </a>
               </li>
+              <li className="text-white/60">
+                Cantonment, Lucknow, Uttar Pradesh 226002
+              </li>
             </ul>
           </div>
-          <div id="faq">
+          <div id="faq" className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
               FAQs
             </p>
@@ -76,6 +86,7 @@ export function SiteFooter() {
               <li>Do you list individual puppies online?</li>
               <li>How does pricing work?</li>
               <li>Can my vet verify paperwork?</li>
+              <li>Do you support pickup in Lucknow zones?</li>
             </ul>
             <Link
               href={`mailto:${site.email}?subject=FAQ`}
@@ -95,6 +106,10 @@ export function SiteFooter() {
             Unsplash
           </a>
           .
+        </p>
+        <p className="mt-3 text-center text-xs text-white/40">
+          Local coverage: Cantonment, Arjunganj, Gomti Nagar, Indira Nagar,
+          Aliganj, Hazratganj.
         </p>
       </div>
     </footer>

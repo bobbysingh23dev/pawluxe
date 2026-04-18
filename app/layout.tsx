@@ -19,17 +19,37 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Private dog placement`,
+    default: `Puppies in ${site.city} | ${site.name}`,
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  keywords: [
+    "puppies in Lucknow",
+    "buy puppy Lucknow",
+    "pet shop Lucknow",
+    "dog breeder Lucknow",
+    "Labrador puppy Lucknow",
+    "Golden Retriever puppy Lucknow",
+  ],
+  alternates: {
+    canonical: site.url,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: site.name,
+    title: `Healthy Puppies in ${site.city} | ${site.name}`,
     description: site.description,
     url: site.url,
     siteName: site.name,
     locale: site.locale,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Puppies in ${site.city} | ${site.name}`,
+    description: site.description,
   },
 };
 

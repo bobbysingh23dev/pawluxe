@@ -1,10 +1,19 @@
 import Image from "next/image";
+import { GoldenRetrieverWithButterfly } from "@/public/images";
 
 const stats = [
   { value: "10+", label: "Years Experience" },
   { value: "20k+", label: "Puppies Sold" },
   { value: "98%", label: "Satisfaction" },
   { value: "5★", label: "Rating" },
+] as const;
+
+const trustSignals = [
+  "Location: Cantonment, Lucknow 226002",
+  "Google rating: 4.4 based on 85 reviews",
+  "Vet-backed vaccination and deworming records",
+  "Pickup support across key Lucknow zones",
+  "Real local families with post-adoption support",
 ] as const;
 
 export function FigmaAbout() {
@@ -14,11 +23,11 @@ export function FigmaAbout() {
       className="border-y border-border-soft bg-bg-section px-0 py-16 sm:py-20"
     >
       <div className="container-home grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-[480px] lg:mx-0">
+        <div className="relative mx-auto aspect-4/5 w-full max-w-[480px] lg:mx-0">
           <div className="relative h-full w-full overflow-hidden rounded-[24px] shadow-[0_10px_25px_rgba(0,0,0,0.05)]">
             <Image
-              src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=960&q=85"
-              alt="Golden retriever"
+              src={GoldenRetrieverWithButterfly}
+              alt="Golden retriever with butterfly"
               fill
               className="object-cover object-center transition duration-500 hover:scale-[1.03]"
               sizes="(max-width: 1024px) 100vw, 480px"
@@ -26,17 +35,28 @@ export function FigmaAbout() {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-h2 text-text-primary">About Us</h2>
+        <div className="rounded-2xl border border-border-soft/70 bg-white/60 p-6 shadow-[0_8px_24px_rgba(0,0,0,0.04)] sm:p-8">
+          <h2 className="text-h2 text-text-primary">About Our Lucknow Kennel</h2>
           <p className="mt-6 text-base leading-relaxed text-text-secondary">
-            We are a family-run breeder dedicated to raising healthy, well-socialized
-            puppies in a loving home environment. Our dogs are part of our family
-            before they become part of yours.
+            We are a Lucknow-based, family-run kennel focused on healthy,
+            well-socialized puppies for local homes. Every placement is guided
+            by fit, paperwork transparency, and responsible handoff.
           </p>
           <p className="mt-4 text-base leading-relaxed text-text-secondary">
-            Every puppy receives veterinary care, early socialization, and lots of
-            attention so they arrive confident, happy, and ready to bond with you.
+            Before reservation, we walk you through breed fit, provide
+            veterinary records, and support your first-week transition plan.
           </p>
+
+          <ul className="mt-6 grid gap-2 text-sm font-medium text-text-primary sm:grid-cols-2">
+            {trustSignals.map((signal) => (
+              <li
+                key={signal}
+                className="rounded-xl border border-border-soft bg-bg-section px-3 py-2"
+              >
+                {signal}
+              </li>
+            ))}
+          </ul>
 
           <dl className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
             {stats.map((s) => (
