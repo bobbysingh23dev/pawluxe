@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
+const PAW_STRIP_BG = {
+  backgroundImage: "url(/images/dog-match-paw-bg.png)",
+  backgroundRepeat: "repeat-x" as const,
+  /* Full asset height = strip height; tiles across so it reads as a paw line */
+  backgroundSize: "auto 100%",
+  backgroundPosition: "center",
+};
+
 type Answers = {
   home: "apartment" | "house" | null;
   activity: "low" | "medium" | "high" | null;
@@ -63,31 +71,44 @@ function scoreMatches(answers: Answers): Match[] {
 
   for (const item of all) {
     if (answers.home === "apartment") {
-      if (item.title === "Pug" || item.title === "French Bulldog") item.score += 3;
+      if (item.title === "Pug" || item.title === "French Bulldog")
+        item.score += 3;
       if (item.title === "Labrador Retriever") item.score += 1;
     }
     if (answers.home === "house") {
-      if (item.title === "Labrador Retriever" || item.title === "Golden Retriever")
+      if (
+        item.title === "Labrador Retriever" ||
+        item.title === "Golden Retriever"
+      )
         item.score += 3;
     }
 
     if (answers.activity === "low") {
-      if (item.title === "Pug" || item.title === "French Bulldog") item.score += 3;
+      if (item.title === "Pug" || item.title === "French Bulldog")
+        item.score += 3;
     }
     if (answers.activity === "medium") {
-      if (item.title === "Golden Retriever" || item.title === "Pug") item.score += 2;
+      if (item.title === "Golden Retriever" || item.title === "Pug")
+        item.score += 2;
       if (item.title === "Labrador Retriever") item.score += 1;
     }
     if (answers.activity === "high") {
-      if (item.title === "Labrador Retriever" || item.title === "Golden Retriever")
+      if (
+        item.title === "Labrador Retriever" ||
+        item.title === "Golden Retriever"
+      )
         item.score += 3;
     }
 
     if (answers.size === "small") {
-      if (item.title === "Pug" || item.title === "French Bulldog") item.score += 3;
+      if (item.title === "Pug" || item.title === "French Bulldog")
+        item.score += 3;
     }
     if (answers.size === "medium") {
-      if (item.title === "Labrador Retriever" || item.title === "Golden Retriever")
+      if (
+        item.title === "Labrador Retriever" ||
+        item.title === "Golden Retriever"
+      )
         item.score += 2;
     }
     if (answers.size === "large") {
@@ -96,31 +117,44 @@ function scoreMatches(answers: Answers): Match[] {
     }
 
     if (answers.budget === "under45") {
-      if (item.title === "Pug" || item.title === "Labrador Retriever") item.score += 3;
+      if (item.title === "Pug" || item.title === "Labrador Retriever")
+        item.score += 3;
     }
     if (answers.budget === "45to90") {
-      if (item.title === "Golden Retriever" || item.title === "Labrador Retriever")
+      if (
+        item.title === "Golden Retriever" ||
+        item.title === "Labrador Retriever"
+      )
         item.score += 2;
     }
     if (answers.budget === "90plus") {
-      if (item.title === "French Bulldog" || item.title === "Bernedoodle") item.score += 3;
+      if (item.title === "French Bulldog" || item.title === "Bernedoodle")
+        item.score += 3;
     }
 
     if (answers.kids === "yes") {
-      if (item.title === "Labrador Retriever" || item.title === "Golden Retriever")
+      if (
+        item.title === "Labrador Retriever" ||
+        item.title === "Golden Retriever"
+      )
         item.score += 3;
     }
     if (answers.kids === "no") {
-      if (item.title === "French Bulldog" || item.title === "Pug") item.score += 2;
+      if (item.title === "French Bulldog" || item.title === "Pug")
+        item.score += 2;
     }
 
     if (answers.experience === "first") {
-      if (item.title === "Labrador Retriever" || item.title === "Golden Retriever")
+      if (
+        item.title === "Labrador Retriever" ||
+        item.title === "Golden Retriever"
+      )
         item.score += 2;
       if (item.title === "Pug") item.score += 1;
     }
     if (answers.experience === "experienced") {
-      if (item.title === "Bernedoodle" || item.title === "French Bulldog") item.score += 2;
+      if (item.title === "Bernedoodle" || item.title === "French Bulldog")
+        item.score += 2;
     }
   }
 
@@ -140,22 +174,41 @@ export function FigmaDogMatchGame() {
     setShowResults(false);
   }
 
+  const pawTrack = (
+    <div
+      className="h-10 w-full overflow-hidden sm:h-11"
+      style={PAW_STRIP_BG}
+      aria-hidden
+    />
+  );
+
   return (
-    <section className="bg-[#fffaf3] px-0 py-10 sm:py-12">
+    <section className="bg-[#fffaf3] px-0 py-8 sm:py-10">
       <div className="container-home">
-        <div className="rounded-3xl border border-[#f4d2a3] bg-white p-6 text-center shadow-sm sm:p-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Dog Match Game</p>
-          <h2 className="mt-2 text-h2 text-text-primary">Confused Which Dog To Buy?</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-text-secondary">
-            Tap below and answer a few fun questions. We will suggest your top 3 best-matched breeds.
-          </p>
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            className="mt-6 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition hover:opacity-90"
-          >
-            Start Quiz
-          </button>
+        <div className="overflow-hidden rounded-3xl border border-[#f4d2a3]/80 bg-primary px-4 py-5 shadow-sm sm:px-6 sm:py-6">
+          <div className="mb-4 border-b border-white/25 pb-4">{pawTrack}</div>
+
+          <div className="rounded-3xl border border-[#f4d2a3] bg-white p-6 text-center shadow-sm sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Dog Match Game
+            </p>
+            <h2 className="mt-2 text-h2 text-text-primary">
+              Confused Which Dog To Buy?
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-text-secondary">
+              Tap below and answer a few fun questions. We will suggest your top
+              3 best-matched breeds.
+            </p>
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              className="mt-6 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Start Quiz
+            </button>
+          </div>
+
+          <div className="mt-4 border-t border-white/25 pt-4">{pawTrack}</div>
         </div>
 
         {open ? (
@@ -166,7 +219,9 @@ export function FigmaDogMatchGame() {
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
                     Dog Match Quiz
                   </p>
-                  <h3 className="mt-1 text-2xl font-black text-text-primary">Find Your Top 3 Matches</h3>
+                  <h3 className="mt-1 text-2xl font-black text-text-primary">
+                    Find Your Top 3 Matches
+                  </h3>
                 </div>
                 <button
                   type="button"
@@ -184,15 +239,27 @@ export function FigmaDogMatchGame() {
                 <>
                   <div className="mt-6 grid gap-4 md:grid-cols-2">
                     <div className="rounded-2xl border border-border-soft p-4">
-                      <p className="text-sm font-bold text-text-primary">1) Home type</p>
+                      <p className="text-sm font-bold text-text-primary">
+                        1) Home type
+                      </p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {[["Apartment", "apartment"], ["House", "house"]].map(([label, value]) => (
+                        {[
+                          ["Apartment", "apartment"],
+                          ["House", "house"],
+                        ].map(([label, value]) => (
                           <button
                             key={value}
                             type="button"
-                            onClick={() => setAnswers((s) => ({ ...s, home: value as Answers["home"] }))}
+                            onClick={() =>
+                              setAnswers((s) => ({
+                                ...s,
+                                home: value as Answers["home"],
+                              }))
+                            }
                             className={`rounded-full px-4 py-2 text-xs font-bold transition ${
-                              answers.home === value ? "bg-primary text-white" : "bg-bg-section text-text-primary"
+                              answers.home === value
+                                ? "bg-primary text-white"
+                                : "bg-bg-section text-text-primary"
                             }`}
                           >
                             {label}
@@ -202,15 +269,28 @@ export function FigmaDogMatchGame() {
                     </div>
 
                     <div className="rounded-2xl border border-border-soft p-4">
-                      <p className="text-sm font-bold text-text-primary">2) Activity level</p>
+                      <p className="text-sm font-bold text-text-primary">
+                        2) Activity level
+                      </p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {[["Low", "low"], ["Medium", "medium"], ["High", "high"]].map(([label, value]) => (
+                        {[
+                          ["Low", "low"],
+                          ["Medium", "medium"],
+                          ["High", "high"],
+                        ].map(([label, value]) => (
                           <button
                             key={value}
                             type="button"
-                            onClick={() => setAnswers((s) => ({ ...s, activity: value as Answers["activity"] }))}
+                            onClick={() =>
+                              setAnswers((s) => ({
+                                ...s,
+                                activity: value as Answers["activity"],
+                              }))
+                            }
                             className={`rounded-full px-4 py-2 text-xs font-bold transition ${
-                              answers.activity === value ? "bg-primary text-white" : "bg-bg-section text-text-primary"
+                              answers.activity === value
+                                ? "bg-primary text-white"
+                                : "bg-bg-section text-text-primary"
                             }`}
                           >
                             {label}
@@ -220,15 +300,28 @@ export function FigmaDogMatchGame() {
                     </div>
 
                     <div className="rounded-2xl border border-border-soft p-4">
-                      <p className="text-sm font-bold text-text-primary">3) Preferred size</p>
+                      <p className="text-sm font-bold text-text-primary">
+                        3) Preferred size
+                      </p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {[["Small", "small"], ["Medium", "medium"], ["Large", "large"]].map(([label, value]) => (
+                        {[
+                          ["Small", "small"],
+                          ["Medium", "medium"],
+                          ["Large", "large"],
+                        ].map(([label, value]) => (
                           <button
                             key={value}
                             type="button"
-                            onClick={() => setAnswers((s) => ({ ...s, size: value as Answers["size"] }))}
+                            onClick={() =>
+                              setAnswers((s) => ({
+                                ...s,
+                                size: value as Answers["size"],
+                              }))
+                            }
                             className={`rounded-full px-4 py-2 text-xs font-bold transition ${
-                              answers.size === value ? "bg-primary text-white" : "bg-bg-section text-text-primary"
+                              answers.size === value
+                                ? "bg-primary text-white"
+                                : "bg-bg-section text-text-primary"
                             }`}
                           >
                             {label}
@@ -238,35 +331,28 @@ export function FigmaDogMatchGame() {
                     </div>
 
                     <div className="rounded-2xl border border-border-soft p-4">
-                      <p className="text-sm font-bold text-text-primary">4) Budget range</p>
+                      <p className="text-sm font-bold text-text-primary">
+                        4) Budget range
+                      </p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {[["Under ₹45k", "under45"], ["₹45k - ₹90k", "45to90"], ["₹90k+", "90plus"]].map(
-                          ([label, value]) => (
-                            <button
-                              key={value}
-                              type="button"
-                              onClick={() => setAnswers((s) => ({ ...s, budget: value as Answers["budget"] }))}
-                              className={`rounded-full px-4 py-2 text-xs font-bold transition ${
-                                answers.budget === value ? "bg-primary text-white" : "bg-bg-section text-text-primary"
-                              }`}
-                            >
-                              {label}
-                            </button>
-                          )
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="rounded-2xl border border-border-soft p-4">
-                      <p className="text-sm font-bold text-text-primary">5) Kids at home?</p>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {[["Yes", "yes"], ["No", "no"]].map(([label, value]) => (
+                        {[
+                          ["Under ₹45k", "under45"],
+                          ["₹45k - ₹90k", "45to90"],
+                          ["₹90k+", "90plus"],
+                        ].map(([label, value]) => (
                           <button
                             key={value}
                             type="button"
-                            onClick={() => setAnswers((s) => ({ ...s, kids: value as Answers["kids"] }))}
+                            onClick={() =>
+                              setAnswers((s) => ({
+                                ...s,
+                                budget: value as Answers["budget"],
+                              }))
+                            }
                             className={`rounded-full px-4 py-2 text-xs font-bold transition ${
-                              answers.kids === value ? "bg-primary text-white" : "bg-bg-section text-text-primary"
+                              answers.budget === value
+                                ? "bg-primary text-white"
+                                : "bg-bg-section text-text-primary"
                             }`}
                           >
                             {label}
@@ -276,26 +362,62 @@ export function FigmaDogMatchGame() {
                     </div>
 
                     <div className="rounded-2xl border border-border-soft p-4">
-                      <p className="text-sm font-bold text-text-primary">6) Experience level</p>
+                      <p className="text-sm font-bold text-text-primary">
+                        5) Kids at home?
+                      </p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {[["First-time owner", "first"], ["Experienced", "experienced"]].map(
-                          ([label, value]) => (
-                            <button
-                              key={value}
-                              type="button"
-                              onClick={() =>
-                                setAnswers((s) => ({ ...s, experience: value as Answers["experience"] }))
-                              }
-                              className={`rounded-full px-4 py-2 text-xs font-bold transition ${
-                                answers.experience === value
-                                  ? "bg-primary text-white"
-                                  : "bg-bg-section text-text-primary"
-                              }`}
-                            >
-                              {label}
-                            </button>
-                          )
-                        )}
+                        {[
+                          ["Yes", "yes"],
+                          ["No", "no"],
+                        ].map(([label, value]) => (
+                          <button
+                            key={value}
+                            type="button"
+                            onClick={() =>
+                              setAnswers((s) => ({
+                                ...s,
+                                kids: value as Answers["kids"],
+                              }))
+                            }
+                            className={`rounded-full px-4 py-2 text-xs font-bold transition ${
+                              answers.kids === value
+                                ? "bg-primary text-white"
+                                : "bg-bg-section text-text-primary"
+                            }`}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-border-soft p-4">
+                      <p className="text-sm font-bold text-text-primary">
+                        6) Experience level
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {[
+                          ["First-time owner", "first"],
+                          ["Experienced", "experienced"],
+                        ].map(([label, value]) => (
+                          <button
+                            key={value}
+                            type="button"
+                            onClick={() =>
+                              setAnswers((s) => ({
+                                ...s,
+                                experience: value as Answers["experience"],
+                              }))
+                            }
+                            className={`rounded-full px-4 py-2 text-xs font-bold transition ${
+                              answers.experience === value
+                                ? "bg-primary text-white"
+                                : "bg-bg-section text-text-primary"
+                            }`}
+                          >
+                            {label}
+                          </button>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -315,9 +437,16 @@ export function FigmaDogMatchGame() {
                 <div className="mt-8">
                   <div className="grid gap-4 md:grid-cols-3">
                     {matches.map((match) => (
-                      <article key={match.slug} className="rounded-2xl border border-[#f8d7a6] bg-[#fff7ed] p-5">
-                        <p className="text-lg font-black text-text-primary">{match.title}</p>
-                        <p className="mt-2 text-sm text-text-secondary">{match.why}</p>
+                      <article
+                        key={match.slug}
+                        className="rounded-2xl border border-[#f8d7a6] bg-[#fff7ed] p-5"
+                      >
+                        <p className="text-lg font-black text-text-primary">
+                          {match.title}
+                        </p>
+                        <p className="mt-2 text-sm text-text-secondary">
+                          {match.why}
+                        </p>
                         <Link
                           href={`/dogs/${match.slug}`}
                           onClick={() => setOpen(false)}

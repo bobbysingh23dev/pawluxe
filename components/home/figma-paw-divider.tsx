@@ -1,4 +1,4 @@
-function PawGlyph({ className }: { className?: string }) {
+export function PawGlyph({ className }: { className?: string }) {
   return (
     <svg
       className={className}
