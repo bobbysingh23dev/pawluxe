@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { FigmaAbout } from "@/components/home/figma-about";
 import { FigmaCareTips } from "@/components/home/figma-care-tips";
+import { FigmaDogMatchGame } from "@/components/home/figma-dog-match-game";
 import { FigmaHero } from "@/components/home/figma-hero";
 import { FigmaPromo } from "@/components/home/figma-promo";
 import { FigmaReviews } from "@/components/home/figma-reviews";
@@ -21,6 +22,7 @@ export default function HomePage() {
     <>
       <FigmaHero />
       <FigmaAbout />
+      <FigmaDogMatchGame />
       <FigmaReviews />
       <FigmaCareTips />
       <FigmaShopGrid />
