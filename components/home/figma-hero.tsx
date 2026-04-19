@@ -35,7 +35,7 @@ export function FigmaHero() {
             </div>
           </div>
 
-          <h1 className="relative z-10 mt-7 max-w-[820px] text-4xl font-black leading-[0.95] tracking-[-0.02em] text-[#f97316] sm:text-5xl lg:text-[58px]">
+          <h1 className="relative z-10 mt-7 max-w-[820px] text-4xl font-black leading-[1.08] tracking-[-0.015em] text-[#f97316] sm:text-5xl sm:leading-[1.06] lg:text-[58px] lg:leading-[1.05]">
             Healthy Puppies in Lucknow with Verified Records
           </h1>
           <p className="relative z-10 mt-4 max-w-[560px] text-center text-sm leading-relaxed text-[#6b7280] sm:text-base">
