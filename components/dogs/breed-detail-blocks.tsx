@@ -1,5 +1,8 @@
+"use client";
+
 import type { BreedSnapshot } from "@/lib/types";
 import { site } from "@/lib/site";
+import { trackLeadClick } from "@/lib/lead-tracking";
 
 export function BreedInsightsCard({
   breed,
@@ -31,38 +34,50 @@ export function BreedInsightsCard({
   );
 }
 
-export function InquiryContactGrid({ breed }: { breed: string }) {
+export function InquiryContactGrid({
+  breed,
+  slug,
+  source,
+}: {
+  breed: string;
+  slug: string;
+  source: "breed_detail" | "lucknow_breed_detail";
+}) {
   const smsBody = encodeURIComponent(
-    `Hi — I'd like to inquire about ${breed}. (Reached via ${site.url})`,
+    `Hi — I'd like to inquire about ${breed}. Source=${source} slug=${slug} (Reached via ${site.url})`,
   );
   const waText = encodeURIComponent(
-    `Hi — I'd like to inquire about ${breed}. I found you on ${site.url}`,
+    `Hi — I'd like to inquire about ${breed}. Source=${source} slug=${slug}. I found you on ${site.url}`,
   );
 
   const items = [
     {
       label: "Email",
       hint: site.email,
-      href: `mailto:${site.email}?subject=${encodeURIComponent(`Inquiry: ${breed}`)}`,
+      href: `mailto:${site.email}?subject=${encodeURIComponent(`Inquiry: ${breed} [${source} ${slug}]`)}`,
       variant: "primary" as const,
+      channel: "email" as const,
     },
     {
       label: "WhatsApp",
       hint: site.phone,
       href: `${site.whatsappHref}?text=${waText}`,
       variant: "secondary" as const,
+      channel: "whatsapp" as const,
     },
     {
       label: "Call",
       hint: site.phone,
       href: `tel:${site.phoneHref}`,
       variant: "secondary" as const,
+      channel: "call" as const,
     },
     {
       label: "SMS",
       hint: site.phone,
       href: `sms:${site.phoneHref}?body=${smsBody}`,
       variant: "secondary" as const,
+      channel: "sms" as const,
     },
   ];
 
@@ -82,6 +97,14 @@ export function InquiryContactGrid({ breed }: { breed: string }) {
               item.variant === "primary"
                 ? "btn-terracotta flex flex-col items-center justify-center rounded-2xl px-4 py-4 text-center text-sm font-bold"
                 : "flex flex-col items-center justify-center rounded-2xl border-2 border-terracotta px-4 py-4 text-center text-sm font-bold text-terracotta transition hover:bg-terracotta hover:text-white"
+            }
+            onClick={() =>
+              trackLeadClick({
+                channel: item.channel,
+                breed,
+                slug,
+                source,
+              })
             }
           >
             <span>{item.label}</span>

@@ -81,7 +81,11 @@ export default async function LucknowBreedPage({ params }: Props) {
         </ul>
 
         <div className="mt-10">
-          <InquiryContactGrid breed={cat.breed} />
+          <InquiryContactGrid
+            breed={cat.breed}
+            slug={cat.slug}
+            source="lucknow_breed_detail"
+          />
         </div>
 
         <div className="mt-8">

@@ -29,7 +29,7 @@ export const site = {
     longitude: 80.9959,
   },
   url: "https://www.pawluxe.com",
-  email: "contact@pawluxe.com",
+  email: "Ronit.gipl@gmail.com",
   phone: "+91 70546 11731",
   /** E.164 without spaces — use for tel:, sms:, and wa.me */
   phoneHref: "+917054611731",

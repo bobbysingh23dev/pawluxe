@@ -113,7 +113,11 @@ export default async function DogCategoryPage({ params }: Props) {
           </ul>
         </div>
 
-        <InquiryContactGrid breed={cat.breed} />
+        <InquiryContactGrid
+          breed={cat.breed}
+          slug={cat.slug}
+          source="breed_detail"
+        />
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link
