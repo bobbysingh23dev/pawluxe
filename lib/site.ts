@@ -1,6 +1,8 @@
 export const site = {
-  name: "PawLuxe",
+  name: "Ronit",
   legalName: "Ronit Pet Kennel",
+  brandName: "Ronit",
+  alternateNames: ["Ronit", "Ronit Pet Kennel", "Ronit Pet Kennel Lucknow"],
   description:
     "Buy healthy, vet-checked puppies in Lucknow with transparent pricing, verified records, and local support.",
   city: "Lucknow",

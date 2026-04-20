@@ -4,7 +4,8 @@ export function OrganizationJsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: site.name,
+    name: site.brandName,
+    alternateName: site.alternateNames,
     url: site.url,
     description: site.description,
     email: site.email,
@@ -15,6 +16,7 @@ export function OrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "PetStore",
     name: site.legalName,
+    alternateName: [site.name, site.brandName],
     url: site.url,
     description: site.description,
     email: site.email,

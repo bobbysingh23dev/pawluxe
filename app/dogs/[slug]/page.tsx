@@ -56,16 +56,9 @@ export default async function DogCategoryPage({ params }: Props) {
               {cat.breed}
             </h1>
             <p className="mt-3 text-lg text-muted">{cat.shortDescription}</p>
-            <div className="mt-6 flex flex-wrap items-baseline gap-3">
-              <span className="text-3xl font-extrabold text-terracotta">
-                Paws {cat.priceFrom}
-              </span>
-              {cat.listPriceLabel ? (
-                <span className="text-muted line-through">
-                  {cat.listPriceLabel} reference
-                </span>
-              ) : null}
-            </div>
+            <p className="mt-5 inline-flex rounded-full border border-terracotta/30 bg-white/75 px-4 py-2 text-sm font-semibold text-terracotta">
+              Delivery available in Lucknow and nearby areas
+            </p>
           </div>
         </div>
       </div>
@@ -93,7 +86,7 @@ export default async function DogCategoryPage({ params }: Props) {
             href={`mailto:${site.email}?subject=${encodeURIComponent(`Inquiry: ${cat.breed}`)}`}
             className="btn-terracotta inline-flex flex-1 items-center justify-center rounded-full px-6 py-3 text-center text-sm font-bold"
           >
-            Email concierge
+            Email us
           </a>
           <Link
             href="/dogs"

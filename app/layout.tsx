@@ -19,8 +19,8 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `Puppies in ${site.city} | ${site.name}`,
-    template: `%s — ${site.name}`,
+    default: `Puppies in ${site.city} | ${site.brandName}`,
+    template: `%s — ${site.brandName}`,
   },
   description: site.description,
   keywords: [
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "buy puppy Lucknow",
     "pet shop Lucknow",
     "dog breeder Lucknow",
+    "Ronit Pet Kennel",
+    "Ronit Pet Kennel Lucknow",
+    "Ronit",
     "Labrador puppy Lucknow",
     "Golden Retriever puppy Lucknow",
   ],
@@ -39,16 +42,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: `Healthy Puppies in ${site.city} | ${site.name}`,
+    title: `Healthy Puppies in ${site.city} | ${site.brandName}`,
     description: site.description,
     url: site.url,
-    siteName: site.name,
+    siteName: site.brandName,
     locale: site.locale,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `Puppies in ${site.city} | ${site.name}`,
+    title: `Puppies in ${site.city} | ${site.brandName}`,
     description: site.description,
   },
 };

@@ -22,7 +22,7 @@ export const posts: BlogPost[] = [
       "Start with documentation you can verify: veterinary relationships, vaccination records, microchip paperwork, and parent health information appropriate to the breed. If something is “private,” ask what that protects—and whether it protects you or the seller.",
       "Observe how puppies are socialized. Calm exposure to household sounds, gentle handling, and predictable routines produce dogs that settle faster in family homes. Flashy photos are nice; steady daily structure is better.",
       "Ask about go-home support. Premium programs include transition guidance, feeding plans, and a clear path if questions arise after placement. That continuity is a signal of long-term care, not a one-time transaction.",
-      "At PawLuxe, we prioritize fit over speed. If you want a checklist tailored to your lifestyle, our team will walk you through it—no pressure, no gimmicks.",
+      "At Ronit, we prioritize fit over speed. If you want a checklist tailored to your lifestyle, our team will walk you through it—no pressure, no gimmicks.",
     ],
   },
   {
@@ -46,7 +46,7 @@ export const posts: BlogPost[] = [
       "Use the crate as a den, not a penalty. Short, pleasant sessions with a high-value chew build a positive association faster than long isolations ever will.",
       "Track appetite, energy, and stool quality for the first seventy-two hours. Small changes are normal during transition; sudden lethargy or repeated GI upset deserves a veterinarian’s eyes.",
       "Introduce leash pressure and name recognition in micro-sessions—two to five minutes—so learning stays fun. End every session before your puppy checks out.",
-      "If you sourced your puppy through PawLuxe, use your go-home packet as the anchor. It is written to match the routines your puppy already knows.",
+      "If you sourced your puppy through Ronit, use your go-home packet as the anchor. It is written to match the routines your puppy already knows.",
     ],
   },
   {
@@ -71,7 +71,7 @@ export const posts: BlogPost[] = [
       "Split meals to match energy cycles. Young puppies often do best on three to four measured meals, shifting toward two as maturity approaches—always aligned with your veterinarian’s guidance.",
       "Watch the coat, the eyes, and the stool. Shine, clarity, and firm formation usually mean the diet is agreeing with your dog, even when marketing claims disagree with each other.",
       "Treats should be tiny and intentional. Training rewards work best when they are part of the daily calorie plan, not an endless add-on.",
-      "PawLuxe families receive a transition feeding outline at placement so you can keep digestion steady while you build your long-term plan with your vet.",
+      "Ronit families receive a transition feeding outline at placement so you can keep digestion steady while you build your long-term plan with your vet.",
     ],
   },
 ];

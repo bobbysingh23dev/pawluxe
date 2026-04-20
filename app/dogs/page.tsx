@@ -19,14 +19,14 @@ export default function DogsPage() {
     <div className="bg-cream px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="text-center text-sm font-bold uppercase tracking-wider text-terracotta">
-          PawLuxe
+          Ronit
         </p>
         <h1 className="mt-2 text-center text-4xl font-extrabold text-charcoal">
           Puppies in Lucknow
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted">
-          Compare available breeds, expected pricing, and open spots across
-          Lucknow-friendly companion and pedigree lines.
+          Browse the full list of currently available breeds. Open any card to
+          view complete details and delivery information.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((c) => (

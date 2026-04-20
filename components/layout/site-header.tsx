@@ -28,8 +28,13 @@ export function SiteHeader() {
               href="/"
               className="flex shrink-0 items-center gap-2 text-white"
             >
-              <span className="text-lg font-extrabold tracking-tight sm:text-xl">
-                PawLuxe
+              <span className="flex flex-col leading-none">
+                <span className="text-lg font-extrabold tracking-tight sm:text-xl">
+                  Ronit
+                </span>
+                <span className="mt-0.5 text-[10px] font-semibold tracking-[0.02em] sm:text-xs">
+                  (by Ronit Pet Kennel)
+                </span>
               </span>
             </Link>
 

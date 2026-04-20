@@ -24,12 +24,12 @@ export const dogCategories: DogCategory[] = [
     whatYouReceive: [
       "Private media pack (by invitation)",
       "Health summary for your veterinarian",
-      "Concierge handoff plan",
+      "Guided handoff plan",
     ],
     imageSrc:
       "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=800&q=85",
     imageAlt: "Golden retriever puppy",
-    acceptingInquiries: true,
+    acceptingInquiries: false,
     priceFrom: "₹55,000",
     listPriceLabel: "₹72,000",
     spotsLabel: { filled: 16, open: 4 },
@@ -43,7 +43,7 @@ export const dogCategories: DogCategory[] = [
       "Airway-aware vet review. Availability is tight—we qualify buyers before any album is shared.",
     detailParagraphs: [
       "Honest conversations about climate, exercise limits, and veterinary access.",
-      "Private overview of options only after concierge screening.",
+      "Private overview of options only after initial screening.",
     ],
     whatYouReceive: [
       "Airway and conformation notes",
@@ -53,10 +53,76 @@ export const dogCategories: DogCategory[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=85",
     imageAlt: "French bulldog puppy",
-    acceptingInquiries: true,
+    acceptingInquiries: false,
     priceFrom: "₹1,20,000",
     listPriceLabel: "₹1,75,000",
     spotsLabel: { filled: 12, open: 6 },
+  },
+  {
+    slug: "lhasa-apso-puppies-companion",
+    breed: "Lhasa Apso",
+    lifeStage: "puppy",
+    lineKind: "companion",
+    shortDescription:
+      "Compact companion pups with playful temperament and apartment-friendly size.",
+    detailParagraphs: [
+      "Male and female puppies are available based on current breeder updates.",
+      "Photos, videos, and paperwork details are shared directly on inquiry.",
+    ],
+    whatYouReceive: [
+      "Health and vaccination summary",
+      "Breed care and grooming starter notes",
+      "Guided handoff and support details",
+    ],
+    imageSrc:
+      "https://images.unsplash.com/photo-1765270428309-96ceb6c2bac4?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Fluffy tan puppy outdoors (Lhasa Apso listing)",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "rottweiler-puppies-pedigree",
+    breed: "Rottweiler",
+    lifeStage: "puppy",
+    lineKind: "pedigree",
+    shortDescription:
+      "Confident guardian-line puppies suited for families seeking strong loyalty.",
+    detailParagraphs: [
+      "Temperament fit and home setup are reviewed before final matching.",
+      "Male and female availability changes weekly.",
+    ],
+    whatYouReceive: [
+      "Basic health and deworming records",
+      "Early handling notes",
+      "Breed-fit guidance for your home",
+    ],
+    imageSrc:
+      "https://images.unsplash.com/photo-1598819849325-f0152d605b08?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Black and tan Rottweiler puppy",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "german-shepherd-puppies-pedigree",
+    breed: "German Shepherd",
+    lifeStage: "puppy",
+    lineKind: "pedigree",
+    shortDescription:
+      "Alert, intelligent puppies from stable lines for active homes.",
+    detailParagraphs: [
+      "Available pups are shared privately with proper temperament guidance.",
+      "Male and female puppies are available.",
+    ],
+    whatYouReceive: [
+      "Vaccination and health summary",
+      "Temperament orientation notes",
+      "Post-handoff support plan",
+    ],
+    imageSrc:
+      "https://images.unsplash.com/photo-1621951714491-3cde56a9cadf?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "German Shepherd puppy outdoors",
+    acceptingInquiries: true,
+    priceFrom: "",
   },
   {
     slug: "labrador-puppies-companion",
@@ -75,12 +141,78 @@ export const dogCategories: DogCategory[] = [
       "Invitation-only media when approved",
     ],
     imageSrc:
-      "https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=800&q=85",
-    imageAlt: "Labrador puppy",
+      "https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Yellow Labrador Retriever puppy sitting",
     acceptingInquiries: true,
     priceFrom: "₹38,000",
     listPriceLabel: "₹52,000",
     spotsLabel: { filled: 20, open: 3 },
+  },
+  {
+    slug: "pomeranian-puppies-companion",
+    breed: "Pomeranian",
+    lifeStage: "puppy",
+    lineKind: "companion",
+    shortDescription:
+      "Small fluffy companion puppies, ideal for indoor family homes.",
+    detailParagraphs: [
+      "Current litters include male and female puppies.",
+      "Routine care and adaptation guidance is shared before handoff.",
+    ],
+    whatYouReceive: [
+      "Vaccination and deworming notes",
+      "Feeding and coat-care basics",
+      "Private media pack on request",
+    ],
+    imageSrc:
+      "https://plus.unsplash.com/premium_photo-1719177518229-79d47d45d49a?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Small white fluffy dog on blue background (Pomeranian listing)",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "doberman-puppies-pedigree",
+    breed: "Doberman",
+    lifeStage: "puppy",
+    lineKind: "pedigree",
+    shortDescription:
+      "Athletic, intelligent puppies for experienced and active families.",
+    detailParagraphs: [
+      "Home suitability and early training readiness are reviewed first.",
+      "Male and female puppies are available.",
+    ],
+    whatYouReceive: [
+      "Health and basic records",
+      "Early behavior notes",
+      "Transition guidance",
+    ],
+    imageSrc:
+      "https://images.unsplash.com/photo-1599586477491-f86db60c0c1c?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Black and tan Doberman Pinscher",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "poodle-puppies-companion",
+    breed: "Poodle",
+    lifeStage: "puppy",
+    lineKind: "companion",
+    shortDescription:
+      "Smart, trainable puppies with family-friendly companion temperament.",
+    detailParagraphs: [
+      "Detailed puppy profiles are shared directly after inquiry.",
+      "Male and female puppies are available by current litter cycle.",
+    ],
+    whatYouReceive: [
+      "Health/vaccination summary",
+      "Coat-care starter guidance",
+      "Feeding plan basics",
+    ],
+    imageSrc:
+      "https://images.unsplash.com/photo-1608577474161-35429dc7c80d?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Brown Poodle on white bed",
+    acceptingInquiries: true,
+    priceFrom: "",
   },
   {
     slug: "pug-puppies-companion",
@@ -99,12 +231,100 @@ export const dogCategories: DogCategory[] = [
       "Private puppy media after approval",
     ],
     imageSrc:
-      "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=85",
-    imageAlt: "Pug puppy",
+      "https://images.unsplash.com/photo-1535909339361-ef56e179d637?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Shallow focus portrait of fawn Pug",
     acceptingInquiries: true,
     priceFrom: "₹32,000",
     listPriceLabel: "₹45,000",
     spotsLabel: { filled: 10, open: 4 },
+  },
+  {
+    slug: "saint-bernard-puppies-pedigree",
+    breed: "Saint Bernard",
+    lifeStage: "puppy",
+    lineKind: "pedigree",
+    shortDescription:
+      "Large, gentle puppies with calm family temperament when matched correctly.",
+    detailParagraphs: [
+      "Space and climate suitability is discussed before booking.",
+      "Male and female puppies are available.",
+    ],
+    whatYouReceive: [
+      "Basic health records",
+      "Large-breed care notes",
+      "Guided handoff details",
+    ],
+    imageSrc:
+      "https://media.istockphoto.com/id/1137535145/photo/st-bernards-puppy-on-the-grass-in-the-summer-park.jpg?s=170667a&w=0&k=20&c=dyzf91lkN2r57OcMfORpNC6PDE0rcndBTHZy3Uw98Nw=",
+    imageAlt: "Saint Bernard puppy on grass in summer park",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "chow-chow-puppies-pedigree",
+    breed: "Chow Chow",
+    lifeStage: "puppy",
+    lineKind: "pedigree",
+    shortDescription:
+      "Distinctive fluffy puppies with independent temperament and premium care needs.",
+    detailParagraphs: [
+      "Best suited for families ready for grooming and early socialization.",
+      "Male and female puppies are available.",
+    ],
+    whatYouReceive: [
+      "Health and vaccination details",
+      "Coat-maintenance notes",
+      "Private profile media on inquiry",
+    ],
+    imageSrc:
+      "https://images.unsplash.com/photo-1605463457051-4837eb3f48cd?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Chow Chow standing on snow",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "beagle-puppies-companion",
+    breed: "Beagle",
+    lifeStage: "puppy",
+    lineKind: "companion",
+    shortDescription:
+      "Friendly, curious puppies that adapt well to active family life.",
+    detailParagraphs: [
+      "Puppy availability can vary each week by litter planning.",
+      "Male and female puppies are available.",
+    ],
+    whatYouReceive: [
+      "Health and vaccination summary",
+      "Feeding and activity starter plan",
+      "Support for first-week transition",
+    ],
+    imageSrc:
+      "https://plus.unsplash.com/premium_photo-1663127048434-84db6f90f08d?auto=format&fit=crop&w=800&q=85",
+    imageAlt: "Beagle portrait on wooden floor",
+    acceptingInquiries: true,
+    priceFrom: "",
+  },
+  {
+    slug: "cane-corso-puppies-pedigree",
+    breed: "Cane Corso",
+    lifeStage: "puppy",
+    lineKind: "pedigree",
+    shortDescription:
+      "Powerful guardian-line puppies for experienced handlers and structured homes.",
+    detailParagraphs: [
+      "Home readiness and handling experience are reviewed first.",
+      "Male and female puppies are available.",
+    ],
+    whatYouReceive: [
+      "Health records and guidance",
+      "Early handling notes",
+      "Breed-specific transition support",
+    ],
+    imageSrc:
+      "https://media.istockphoto.com/id/1510704491/photo/puppies-cane-corso.jpg?s=170667a&w=0&k=20&c=Pn4laP1gTsvty1Lnc_Mvhx92dAhiz1MZhiQCVcdY_dk=",
+    imageAlt: "Cane Corso puppies",
+    acceptingInquiries: true,
+    priceFrom: "",
   },
   {
     slug: "bernedoodle-puppies-pedigree",
@@ -125,7 +345,7 @@ export const dogCategories: DogCategory[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=85",
     imageAlt: "Fluffy doodle-type puppy",
-    acceptingInquiries: true,
+    acceptingInquiries: false,
     priceFrom: "₹95,000",
     listPriceLabel: "₹1,35,000",
     spotsLabel: { filled: 9, open: 5 },
@@ -148,7 +368,7 @@ export const dogCategories: DogCategory[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=85",
     imageAlt: "Adult golden retriever",
-    acceptingInquiries: true,
+    acceptingInquiries: false,
     priceFrom: "₹45,000",
     listPriceLabel: "₹60,000",
     spotsLabel: { filled: 6, open: 2 },
@@ -171,7 +391,7 @@ export const dogCategories: DogCategory[] = [
     imageSrc:
       "https://images.unsplash.com/photo-1589941013453-ec89f33b5e87?auto=format&fit=crop&w=800&q=85",
     imageAlt: "German shepherd adult",
-    acceptingInquiries: true,
+    acceptingInquiries: false,
     priceFrom: "₹65,000",
     listPriceLabel: "₹88,000",
     spotsLabel: { filled: 4, open: 3 },

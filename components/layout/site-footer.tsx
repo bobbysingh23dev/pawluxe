@@ -19,6 +19,9 @@ export function SiteFooter() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-lg font-bold">{site.name}</p>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-white/60">
+              by Ronit Pet Kennel
+            </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               Healthy puppies in Lucknow with verified records, transparent
               pricing, and local handoff support.
@@ -97,7 +100,7 @@ export function SiteFooter() {
           </div>
         </div>
         <p className="mt-14 border-t border-white/10 pt-8 text-center text-xs text-white/50">
-          © {new Date().getFullYear()} {site.name}. Photos via{" "}
+          © {new Date().getFullYear()} {site.brandName}. Photos via{" "}
           <a
             href="https://unsplash.com"
             className="underline hover:text-white"
