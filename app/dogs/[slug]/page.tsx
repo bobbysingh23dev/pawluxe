@@ -7,6 +7,10 @@ import {
   getCategoryBySlug,
   lineKindLabel,
 } from "@/lib/data/dog-categories";
+import {
+  BreedInsightsCard,
+  InquiryContactGrid,
+} from "@/components/dogs/breed-detail-blocks";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -57,13 +61,41 @@ export default async function DogCategoryPage({ params }: Props) {
             </h1>
             <p className="mt-3 text-lg text-muted">{cat.shortDescription}</p>
             <p className="mt-5 inline-flex rounded-full border border-terracotta/30 bg-white/75 px-4 py-2 text-sm font-semibold text-terracotta">
-              Delivery available in Lucknow and nearby areas
+              Pickup / delivery around Lucknow — confirm when you inquire
             </p>
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-3xl space-y-10 px-4 py-12 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-amber-200 bg-amber-50/90 p-5 text-sm leading-relaxed text-charcoal shadow-sm">
+          <p className="font-bold text-charcoal">Important</p>
+          <p className="mt-2 text-muted">
+            Breed photos here are{" "}
+            <span className="font-semibold text-charcoal">
+              representative stock images
+            </span>{" "}
+            unless Ronit Pet Kennel sends you updated pictures of an actual puppy.
+            Pricing, sex, age, and availability are{" "}
+            <span className="font-semibold text-charcoal">not</span> live on this
+            website—always confirm on WhatsApp, call, or email.
+          </p>
+          <p className="mt-3 text-muted">
+            For real puppy photos/videos from current litters, message us on{" "}
+            <a
+              href={site.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-terracotta hover:underline"
+            >
+              WhatsApp
+            </a>{" "}
+            and mention the breed name.
+          </p>
+        </div>
+
+        <BreedInsightsCard breed={cat.breed} snapshot={cat.breedSnapshot} />
+
         {cat.detailParagraphs.map((p, i) => (
           <p key={i} className="leading-relaxed text-muted">
             {p}
@@ -72,7 +104,7 @@ export default async function DogCategoryPage({ params }: Props) {
 
         <div className="rounded-2xl border border-border-soft bg-white p-6 shadow-sm">
           <h2 className="text-lg font-extrabold text-charcoal">
-            What you receive
+            What we discuss when you inquire
           </h2>
           <ul className="mt-4 list-inside list-disc space-y-2 text-muted">
             {cat.whatYouReceive.map((item) => (
@@ -81,18 +113,14 @@ export default async function DogCategoryPage({ params }: Props) {
           </ul>
         </div>
 
+        <InquiryContactGrid breed={cat.breed} />
+
         <div className="flex flex-col gap-3 sm:flex-row">
-          <a
-            href={`mailto:${site.email}?subject=${encodeURIComponent(`Inquiry: ${cat.breed}`)}`}
-            className="btn-terracotta inline-flex flex-1 items-center justify-center rounded-full px-6 py-3 text-center text-sm font-bold"
-          >
-            Email us
-          </a>
           <Link
             href="/dogs"
-            className="inline-flex flex-1 items-center justify-center rounded-full border-2 border-terracotta px-6 py-3 text-center text-sm font-bold text-terracotta transition hover:bg-terracotta hover:text-white"
+            className="btn-terracotta inline-flex flex-1 items-center justify-center rounded-full px-6 py-3 text-center text-sm font-bold"
           >
-            All programs
+            All breeds
           </Link>
         </div>
       </div>

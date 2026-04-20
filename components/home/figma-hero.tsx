@@ -39,9 +39,9 @@ export function FigmaHero() {
             Healthy Puppies in Lucknow with Verified Records
           </h1>
           <p className="relative z-10 mt-4 max-w-[560px] text-center text-sm leading-relaxed text-[#6b7280] sm:text-base">
-            Buy puppy in Lucknow with confidence. Explore available litters by
-            breed, check transparent pricing, and review vet-backed paperwork
-            before you reserve.
+            Buy puppy in Lucknow with confidence. Explore breeds we work with,
+            get fees and litter details on inquiry, and review vet-backed
+            paperwork before you reserve.
           </p>
           <div className="relative z-10 mt-7 flex flex-wrap items-center justify-center gap-3">
             <Link

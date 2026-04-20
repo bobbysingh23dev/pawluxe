@@ -6,6 +6,10 @@ import {
   getCategoryBySlug,
   lineKindLabel,
 } from "@/lib/data/dog-categories";
+import {
+  BreedInsightsCard,
+  InquiryContactGrid,
+} from "@/components/dogs/breed-detail-blocks";
 import { site } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -23,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${cat.breed} Puppies in Lucknow`,
-    description: `Check ${cat.breed} puppy availability in Lucknow with pricing guidance and verified paperwork support.`,
+    description: `${cat.breed} puppies in Lucknow — inquire for current availability, fees, and paperwork. Site photos are illustrative.`,
     alternates: {
       canonical: `${site.url}/lucknow/puppies/${cat.slug}`,
     },
@@ -46,34 +50,46 @@ export default async function LucknowBreedPage({ params }: Props) {
         </h1>
         <p className="mt-4 leading-relaxed text-muted">{cat.shortDescription}</p>
 
-        <div className="mt-6 rounded-xl bg-cream p-5">
-          <p className="text-sm font-semibold text-charcoal">
-            Starting from {cat.priceFrom}
+        <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50/90 p-5 text-sm leading-relaxed text-muted">
+          <p className="font-semibold text-charcoal">Availability & fees</p>
+          <p className="mt-2">
+            Not updated live on this site. WhatsApp, call, or email for current
+            litter status, pickup around Lucknow, pricing, and paperwork.
           </p>
-          <p className="mt-2 text-sm text-muted">
-            Open spots: {cat.spotsLabel?.open ?? 0}. Call to confirm current
-            litter status, pickup timeline, and paperwork checklist.
+          <p className="mt-3">
+            Need real inventory images/videos of this breed?{" "}
+            <a
+              href={site.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-terracotta hover:underline"
+            >
+              Message us on WhatsApp
+            </a>{" "}
+            and we will share current puppy media.
           </p>
         </div>
 
-        <ul className="mt-6 list-inside list-disc space-y-2 text-sm text-muted">
+        <div className="mt-10">
+          <BreedInsightsCard breed={cat.breed} snapshot={cat.breedSnapshot} />
+        </div>
+
+        <ul className="mt-10 list-inside list-disc space-y-2 text-sm text-muted">
           <li>Service area includes major Lucknow neighborhoods.</li>
           <li>Vaccination and deworming records available for verification.</li>
           <li>Guided handoff and first-week transition support.</li>
         </ul>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a
-            href={`tel:${site.phoneHref}`}
-            className="btn-terracotta inline-flex flex-1 items-center justify-center rounded-full px-6 py-3 text-sm font-bold"
-          >
-            Call for {cat.breed} availability
-          </a>
+        <div className="mt-10">
+          <InquiryContactGrid breed={cat.breed} />
+        </div>
+
+        <div className="mt-8">
           <Link
             href={`/dogs/${cat.slug}`}
-            className="inline-flex flex-1 items-center justify-center rounded-full border-2 border-terracotta px-6 py-3 text-sm font-bold text-terracotta transition hover:bg-terracotta hover:text-white"
+            className="inline-flex w-full items-center justify-center rounded-full border-2 border-terracotta px-6 py-3 text-sm font-bold text-terracotta transition hover:bg-terracotta hover:text-white sm:w-auto"
           >
-            View full program details
+            Full breed details
           </Link>
         </div>
       </div>

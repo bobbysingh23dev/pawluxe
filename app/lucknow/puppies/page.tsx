@@ -7,9 +7,9 @@ import { site } from "@/lib/site";
 const puppies = getShopListing().filter((c) => c.lifeStage === "puppy");
 
 export const metadata: Metadata = {
-  title: `Puppies in Lucknow - Available Breeds and Pricing`,
+  title: `Puppies in Lucknow — Ronit Pet Kennel`,
   description:
-    "Browse available puppies in Lucknow by breed with pricing, open spots, and verified health-record support before reservation.",
+    "Browse breeds available by inquiry in Lucknow. Photos are illustrative; litter details, fees, and paperwork are confirmed on WhatsApp, call, or email.",
   alternates: {
     canonical: `${site.url}/lucknow/puppies`,
   },
@@ -26,9 +26,9 @@ export default function LucknowPuppiesPage() {
           Buy Puppies in Lucknow
         </h1>
         <p className="mx-auto mt-4 max-w-3xl text-center text-muted">
-          Explore current puppy availability across Cantonment, Arjunganj,
-          Gomti Nagar, Indira Nagar, Aliganj, and Hazratganj. Every listing
-          includes pricing context and direct inquiry support.
+          Explore breeds we work with across Cantonment, Arjunganj, Gomti Nagar,
+          Indira Nagar, Aliganj, and Hazratganj. Photos are illustrative;
+          litter details, fees, and timing are confirmed when you inquire.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

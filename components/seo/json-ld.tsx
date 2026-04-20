@@ -53,7 +53,7 @@ export function OrganizationJsonLd() {
         name: "Do you have puppies available in Lucknow right now?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Availability changes weekly by breed. Contact us to get today's open litters and verified paperwork details.",
+          text: "Availability varies by breed and season. This site does not show live inventory—contact us for current litters, fees, and verified paperwork.",
         },
       },
       {

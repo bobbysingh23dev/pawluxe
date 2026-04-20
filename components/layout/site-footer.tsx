@@ -23,8 +23,8 @@ export function SiteFooter() {
               by Ronit Pet Kennel
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-              Healthy puppies in Lucknow with verified records, transparent
-              pricing, and local handoff support.
+              Healthy puppies in Lucknow: verified records, quotes on inquiry,
+              local handoff support.
             </p>
             <a
               href={`tel:${site.phoneHref}`}
@@ -87,7 +87,7 @@ export function SiteFooter() {
             </p>
             <ul className="mt-4 space-y-3 text-sm text-white/75">
               <li>Do you list individual puppies online?</li>
-              <li>How does pricing work?</li>
+              <li>How do I get a quote?</li>
               <li>Can my vet verify paperwork?</li>
               <li>Do you support pickup in Lucknow zones?</li>
             </ul>

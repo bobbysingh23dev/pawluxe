@@ -6,7 +6,7 @@ import { FigmaShopCard } from "@/components/home/figma-shop-card";
 
 export const metadata: Metadata = {
   title: `Buy Puppies in ${site.city}`,
-  description: `Browse ${site.name} puppy listings in ${site.city} with breed-wise pricing, availability, and verified records.`,
+  description: `Browse breeds ${site.name} works with in ${site.city}. Details and availability are confirmed when you inquire—photos are illustrative.`,
   alternates: {
     canonical: `${site.url}/dogs`,
   },

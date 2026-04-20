@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: `Puppies in ${site.city} - Verified Breeder Listings`,
   description:
-    "Explore available puppies in Lucknow with breed-wise pricing, health records, and local support from first inquiry to handoff.",
+    "Explore breeds and litters in Lucknow — availability and fees confirmed on inquiry; vet-backed paperwork and local support from first contact to handoff.",
   alternates: {
     canonical: site.url,
   },
