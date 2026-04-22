@@ -12,5 +12,16 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPage() {
-  return <FigmaFaq />;
+  return (
+    <>
+      <FigmaFaq />
+      <section className="bg-bg-section px-0 pb-10">
+        <div className="container-home">
+          <p className="text-center text-xs font-semibold text-text-secondary">
+            FAQ content updated: April 2026
+          </p>
+        </div>
+      </section>
+    </>
+  );
 }

@@ -30,7 +30,7 @@ const trustCards = [
 
 export function FigmaTrust() {
   return (
-    <section className="bg-white px-0 py-14 sm:py-16">
+    <section className="bg-white px-0 py-12 sm:py-16">
       <div className="container-home">
         <div className="mx-auto max-w-3xl text-center">
           <p className="inline-flex items-center rounded-full bg-[#fff7ed] px-4 py-2 text-xs font-bold uppercase tracking-wide text-[#9a3412]">
@@ -39,20 +39,19 @@ export function FigmaTrust() {
           <h2 className="mt-4 text-h2 text-text-primary">
             Buy With Clarity, Not Guesswork
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-text-secondary">
-            We keep the process transparent so you can verify key details before
-            you reserve.
+          <p className="mt-3 text-sm leading-relaxed text-text-secondary sm:text-base">
+            Verify key details first, then reserve with confidence.
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+        <div className="mt-7 grid gap-3 sm:gap-4 lg:grid-cols-3">
           {trustCards.map((card) => (
             <article
               key={card.title}
-              className="rounded-2xl border border-border-soft bg-bg-section/60 p-5"
+              className="rounded-2xl border border-border-soft bg-bg-section/60 p-4 sm:p-5"
             >
               <h3 className="text-base font-bold text-text-primary">{card.title}</h3>
-              <ul className="mt-3 space-y-2 text-sm leading-relaxed text-text-secondary">
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-text-secondary">
                 {card.points.map((point) => (
                   <li key={point}>• {point}</li>
                 ))}
@@ -61,10 +60,15 @@ export function FigmaTrust() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-[#fed7aa] bg-[#fffaf0] p-5 sm:flex sm:items-center sm:justify-between sm:gap-4">
-          <p className="text-sm font-semibold text-[#7c2d12]">
-            Still unsure? Start with FAQs or ask your exact question directly.
-          </p>
+        <div className="mt-7 rounded-2xl border border-[#fed7aa] bg-[#fffaf0] p-4 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+          <div>
+            <p className="text-sm font-semibold text-[#7c2d12]">
+              Still unsure? Start with FAQs or ask your exact question directly.
+            </p>
+            <p className="mt-1 text-xs font-semibold text-[#166534]">
+              Typical WhatsApp response: 10-20 minutes
+            </p>
+          </div>
           <div className="mt-3 flex flex-wrap gap-2 sm:mt-0">
             <Link
               href="/faq"

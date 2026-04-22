@@ -39,9 +39,8 @@ export function FigmaHero() {
             Healthy Puppies in Lucknow with Verified Records
           </h1>
           <p className="relative z-10 mt-4 max-w-[560px] text-center text-sm leading-relaxed text-[#6b7280] sm:text-base">
-            Buy puppy in Lucknow with confidence. Explore breeds we work with,
-            get fees and litter details on inquiry, and review vet-backed
-            paperwork before you reserve.
+            Shortlist your breed, verify records, and confirm fees before
+            reservation. No guesswork, only clear details.
           </p>
           <div className="relative z-10 mt-7 flex flex-wrap items-center justify-center gap-3">
             <Link
@@ -57,8 +56,19 @@ export function FigmaHero() {
             >
               Call for Today&apos;s Open Litters
             </a>
+            <a
+              href={`${site.whatsappHref}?text=Hi%2C%20I%20want%20today%27s%20availability%20and%20fee%20details.`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-xl border border-[#25D366] bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+            >
+              WhatsApp Now
+            </a>
           </div>
-          <div className="relative z-10 mt-4 flex flex-wrap items-center justify-center gap-2 text-[11px] font-semibold text-[#7c2d12] sm:text-xs">
+          <p className="relative z-10 mt-3 text-xs font-semibold text-[#166534]">
+            Typical WhatsApp response: 10-20 minutes
+          </p>
+          <div className="relative z-10 mt-3 flex flex-wrap items-center justify-center gap-2 text-[11px] font-semibold text-[#7c2d12] sm:text-xs">
             <span className="rounded-full bg-[#fff7ed] px-3 py-1">
               Vet-backed records shared on inquiry
             </span>

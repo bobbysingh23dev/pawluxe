@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 const faqs = [
   {
     q: "Do you have puppies available right now?",
-    a: "Availability changes by breed and season. Message us on WhatsApp for live options and the current fee range.",
+    a: "Availability changes by breed and season. WhatsApp us for live options and the current fee range.",
   },
   {
     q: "Can I verify vaccination and health records with my vet?",
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Do you provide pickup support in Lucknow?",
-    a: "Yes. We coordinate pickup and local handoff support across major Lucknow zones.",
+    a: "Yes. We coordinate pickup and handoff support across major Lucknow zones.",
   },
   {
     q: "What happens after I bring the puppy home?",
@@ -42,11 +42,14 @@ export function FigmaFaq() {
       <div className="container-home">
         <div className="mx-auto max-w-4xl rounded-2xl border border-border-soft/70 bg-white/70 p-6 shadow-[0_8px_24px_rgba(0,0,0,0.04)] sm:p-8">
           <h2 className="text-h2 text-text-primary">FAQs</h2>
-          <p className="mt-3 text-base leading-relaxed text-text-secondary">
-            Quick answers to common questions before you reserve.
+          <p className="mt-3 text-sm leading-relaxed text-text-secondary sm:text-base">
+            Quick answers before you reserve.
+          </p>
+          <p className="mt-1 text-xs font-semibold text-[#166534]">
+            Typical WhatsApp response: 10-20 minutes
           </p>
 
-          <div className="mt-6 space-y-3">
+          <div className="mt-5 space-y-3">
             {faqs.map((item) => (
               <details
                 key={item.q}
@@ -60,7 +63,7 @@ export function FigmaFaq() {
             ))}
           </div>
 
-          <form onSubmit={handleAskOnWhatsApp} className="mt-6 space-y-2">
+          <form onSubmit={handleAskOnWhatsApp} className="mt-5 space-y-2">
             <label htmlFor="faq-question" className="block text-xs font-semibold text-text-secondary">
               Ask your own question
             </label>
@@ -74,7 +77,7 @@ export function FigmaFaq() {
             />
             <button
               type="submit"
-              className="inline-flex rounded-full bg-primary px-4 py-2 text-xs font-bold text-white transition hover:bg-orange-500"
+              className="inline-flex w-full justify-center rounded-full bg-primary px-4 py-2 text-xs font-bold text-white transition hover:bg-orange-500 sm:w-auto"
             >
               Send question on WhatsApp
             </button>
