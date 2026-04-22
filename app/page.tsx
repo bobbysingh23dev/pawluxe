@@ -6,6 +6,7 @@ import { FigmaHero } from "@/components/home/figma-hero";
 import { FigmaPromo } from "@/components/home/figma-promo";
 import { FigmaReviews } from "@/components/home/figma-reviews";
 import { FigmaShopGrid } from "@/components/home/figma-shop-grid";
+import { FigmaTrust } from "@/components/home/figma-trust";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function HomePage() {
   return (
     <>
       <FigmaHero />
+      <FigmaTrust />
       <FigmaAbout />
       <FigmaDogMatchGame />
       <FigmaReviews />

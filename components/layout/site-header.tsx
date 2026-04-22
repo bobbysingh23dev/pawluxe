@@ -14,6 +14,7 @@ const nav = [
   { href: "/#about", label: "About Us", match: () => false },
   { href: "/dogs", label: "Shop", match: (p: string) => p.startsWith("/dogs") },
   { href: "/blog", label: "Blog", match: (p: string) => p.startsWith("/blog") },
+  { href: "/faq", label: "FAQ", match: (p: string) => p.startsWith("/faq") },
 ] as const;
 
 export function SiteHeader() {

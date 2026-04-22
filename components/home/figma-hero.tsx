@@ -58,6 +58,17 @@ export function FigmaHero() {
               Call for Today&apos;s Open Litters
             </a>
           </div>
+          <div className="relative z-10 mt-4 flex flex-wrap items-center justify-center gap-2 text-[11px] font-semibold text-[#7c2d12] sm:text-xs">
+            <span className="rounded-full bg-[#fff7ed] px-3 py-1">
+              Vet-backed records shared on inquiry
+            </span>
+            <span className="rounded-full bg-[#fff7ed] px-3 py-1">
+              Lucknow local handoff support
+            </span>
+            <span className="rounded-full bg-[#fff7ed] px-3 py-1">
+              Direct WhatsApp response
+            </span>
+          </div>
         </div>
 
         <div className="relative hidden h-[600px] lg:block">

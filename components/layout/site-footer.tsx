@@ -11,12 +11,9 @@ const quick = [
 
 export function SiteFooter() {
   return (
-    <footer
-      id="contact"
-      className="mt-0 bg-text-primary text-white"
-    >
+    <footer id="contact" className="mt-0 bg-text-primary text-white">
       <div className="container-home py-16 sm:py-20">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-lg font-bold">{site.name}</p>
             <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-white/60">
@@ -50,7 +47,7 @@ export function SiteFooter() {
               ))}
               <li>
                 <Link
-                  href="/#faq"
+                  href="/faq"
                   className="text-white/80 transition hover:text-primary"
                 >
                   FAQs
@@ -72,7 +69,10 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href={`tel:${site.phoneHref}`} className="transition hover:text-primary">
+                <a
+                  href={`tel:${site.phoneHref}`}
+                  className="transition hover:text-primary"
+                >
                   {site.phone}
                 </a>
               </li>
@@ -80,23 +80,6 @@ export function SiteFooter() {
                 Cantonment, Lucknow, Uttar Pradesh 226002
               </li>
             </ul>
-          </div>
-          <div id="faq" className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/50">
-              FAQs
-            </p>
-            <ul className="mt-4 space-y-3 text-sm text-white/75">
-              <li>Do you list individual puppies online?</li>
-              <li>How do I get a quote?</li>
-              <li>Can my vet verify paperwork?</li>
-              <li>Do you support pickup in Lucknow zones?</li>
-            </ul>
-            <Link
-              href={`mailto:${site.email}?subject=FAQ`}
-              className="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
-            >
-              Ask us anything →
-            </Link>
           </div>
         </div>
         <p className="mt-14 border-t border-white/10 pt-8 text-center text-xs text-white/50">
