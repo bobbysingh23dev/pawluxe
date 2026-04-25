@@ -55,19 +55,19 @@ export function FigmaReviews() {
             Real Google Reviews
           </h2>
           <p className="mt-2 text-sm font-semibold text-[#7c2d12]">
-            Ronit Pet Kennel · Lucknow
+            PET shop · Lucknow
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
             Pulled from your shared review screenshots. These are real buyer
             voices from Lucknow and nearby areas.
           </p>
           <a
-            href="https://www.google.com/search?q=Ronit+Pet+Kennel+Lucknow"
+            href="https://www.google.com/search?q=PET+shop+Lucknow"
             target="_blank"
             rel="noreferrer"
             className="mt-4 inline-flex rounded-full border border-[#f59e0b] bg-white px-5 py-2 text-xs font-bold uppercase tracking-wide text-[#7c2d12] transition hover:bg-[#fff7ed]"
           >
-            View Ronit Pet Kennel on Google
+            View PET shop on Google
           </a>
 
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-3 divide-x divide-[#f9d8a9] overflow-hidden rounded-2xl border border-[#f8d7a6] bg-white">

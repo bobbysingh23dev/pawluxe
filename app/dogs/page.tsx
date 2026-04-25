@@ -19,7 +19,7 @@ export default function DogsPage() {
     <div className="bg-cream px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <p className="text-center text-sm font-bold uppercase tracking-wider text-terracotta">
-          Ronit
+          PET shop
         </p>
         <h1 className="mt-2 text-center text-4xl font-extrabold text-charcoal">
           Puppies in Lucknow

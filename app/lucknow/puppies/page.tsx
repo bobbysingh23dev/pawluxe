@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 const puppies = getShopListing().filter((c) => c.lifeStage === "puppy");
 
 export const metadata: Metadata = {
-  title: `Puppies in Lucknow — Ronit Pet Kennel`,
+  title: `Puppies in Lucknow — PET shop`,
   description:
     "Browse breeds available by inquiry in Lucknow. Photos are illustrative; litter details, fees, and paperwork are confirmed on WhatsApp, call, or email.",
   alternates: {

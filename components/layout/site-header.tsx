@@ -31,7 +31,7 @@ export function SiteHeader() {
             >
               <span className="flex flex-col leading-none">
                 <span className="text-lg font-extrabold tracking-tight sm:text-xl">
-                  Ronit Pet Kennel
+                  PET shop
                 </span>
               </span>
             </Link>

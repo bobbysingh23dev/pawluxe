@@ -75,7 +75,7 @@ export default async function DogCategoryPage({ params }: Props) {
             <span className="font-semibold text-charcoal">
               representative stock images
             </span>{" "}
-            unless Ronit Pet Kennel sends you updated pictures of an actual puppy.
+            unless PET shop sends you updated pictures of an actual puppy.
             Pricing, sex, age, and availability are{" "}
             <span className="font-semibold text-charcoal">not</span> live on this
             website—always confirm on WhatsApp, call, or email.

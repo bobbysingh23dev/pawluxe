@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 const quick = [
   { href: "/", label: "Home" },
-  { href: "/lucknow/puppies", label: "Puppies in Lucknow" },
+  { href: "/lucknow/puppies", label: "Puppies" },
   { href: "/#about", label: "About Us" },
   { href: "/dogs", label: "Shop" },
   { href: "/blog", label: "Blog" },
@@ -17,17 +17,20 @@ export function SiteFooter() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <p className="text-lg font-bold">{site.name}</p>
             <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-white/60">
-              by Ronit Pet Kennel
+              Owner: {site.ownerName}
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-              Healthy puppies in Lucknow: verified records, quotes on inquiry,
-              local handoff support.
+              Healthy puppies with verified records, quotes on inquiry, and
+              handoff support.
+            </p>
+            <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/70">
+              Serving inquiries across all states.
             </p>
             <a
               href={`tel:${site.phoneHref}`}
               className="mt-4 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-bold text-white transition hover:bg-orange-500"
             >
-              Call now for Lucknow availability
+              Call now for availability
             </a>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -76,9 +79,7 @@ export function SiteFooter() {
                   {site.phone}
                 </a>
               </li>
-              <li className="text-white/60">
-                Cantonment, Lucknow, Uttar Pradesh 226002
-              </li>
+              <li className="text-white/60">Serving across India</li>
             </ul>
           </div>
         </div>
@@ -92,10 +93,6 @@ export function SiteFooter() {
             Unsplash
           </a>
           .
-        </p>
-        <p className="mt-3 text-center text-xs text-white/40">
-          Local coverage: Cantonment, Arjunganj, Gomti Nagar, Indira Nagar,
-          Aliganj, Hazratganj.
         </p>
       </div>
     </footer>
